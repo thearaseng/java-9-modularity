@@ -1,12 +1,13 @@
 package com.theara.modularity.easytext.analysis;
 
 import com.theara.modularity.easytext.analysis.internal.SyllableCounter;
+import com.theara.modularity.easytext.counter.Counter;
 
 public class FlechKincaid {
 
-    public double analyze(String statement){
+    public Counter analyze(String statement){
         // TODO : dumy code
-        return ((double) new SyllableCounter().counterSyllables(statement)) / 100;
+        return new SyllableCounter().getCounter(statement);
     }
 
 }

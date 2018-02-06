@@ -1,10 +1,12 @@
 package com.theara.modularity.easytext.analysis.internal;
 
+import com.theara.modularity.easytext.counter.Counter;
+
 public class SyllableCounter {
 
-    public int counterSyllables(String statement){
+    public Counter getCounter(String statement){
         // TODO : dumy code
-        return statement.length();
+        return new Counter(statement);
     }
 
 }

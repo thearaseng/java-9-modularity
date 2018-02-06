@@ -10,7 +10,7 @@ public class Main {
             return;
         }
 
-        System.out.println("Flesch-Kincaid : " + new FlechKincaid().analyze(args[0]));
+        System.out.println("Flesch-Kincaid : " + new FlechKincaid().analyze(args[0]).getStatementLength());
     }
 
 }
