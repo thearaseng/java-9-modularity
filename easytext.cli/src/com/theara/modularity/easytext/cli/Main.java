@@ -1,6 +1,8 @@
 package com.theara.modularity.easytext.cli;
 
-import com.theara.modularity.easytext.analysis.FlechKincaid;
+import com.theara.easytext.service.Analysis;
+
+import java.util.ServiceLoader;
 
 public class Main {
 
@@ -10,7 +12,11 @@ public class Main {
             return;
         }
 
-        System.out.println("Flesch-Kincaid : " + new FlechKincaid().analyze(args[0]).getStatementLength());
+        Iterable<Analysis> analysisServices = ServiceLoader.load(Analysis.class);
+
+        analysisServices.forEach(analysis -> {
+            System.out.println("Flesch-Kincaid : " + analysis.analyze(args[0]).getStatementLength());
+        });
     }
 
 }

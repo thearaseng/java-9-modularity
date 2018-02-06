@@ -1,4 +1,4 @@
-package com.theara.modularity.easytext.analysis.internal;
+package com.theara.modularity.easytext.internal;
 
 import com.theara.modularity.easytext.counter.Counter;
 
